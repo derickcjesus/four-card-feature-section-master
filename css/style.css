@@ -4,6 +4,36 @@ body {
   background-color: hsl(229deg 6% 66% / 10%);
 }
 
+@media (min-width: 1440px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 386px);
+    justify-content: center;
+  }
+
+  .supervisor {
+    grid-row: span 2;
+    grid-column: 1;
+    margin: auto;
+  }
+
+  .team-builder {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .calculator {
+    grid-row: span 2;
+    grid-column: 3;
+    margin: auto;
+  }
+
+  .karma {
+    grid-row: 2;
+    grid-column: 2;
+  }
+}
+
 @media (min-width: 375px) {
   main {
     text-align: center;
@@ -27,6 +57,11 @@ body {
     text-align: center;
   }
 
+  .cards {
+    display: grid;
+    gap: 28px;
+  }
+
   .cards h1 {
     font-weight: 600;
     color: hsl(234, 12%, 34%);
@@ -48,10 +83,10 @@ body {
     border-radius: 5px;
     background-color: hsl(0, 0%, 98%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 20px;
     text-align: end;
     padding: 32px;
     font-family: "Poppins", sans-serif;
+    cursor: pointer;
   }
 
   .icons {
@@ -79,4 +114,21 @@ body {
     margin: 10px;
     text-align: center;
   }
+}
+
+/* Grow effect */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.1);
 }
